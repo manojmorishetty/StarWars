@@ -79,7 +79,7 @@ export default class PersonList extends Component {
         const json = await response.json();
         let collapseNum = [];
         json.forEach((element,i) =>{
-            element.id = i;
+            element.id = i+1;
             collapseNum.push(false);
           });
         this.setState({ rawdata: json, persons: json, isloading:false, homeplanetcollapse: collapseNum, speciescollapse: collapseNum, filmscollapse: collapseNum });
@@ -172,6 +172,9 @@ export default class PersonList extends Component {
                                                     {person.name}
                                                 </h1>
                                                 <div>
+                                                <Row className="person-item__title">
+                                                        <Col sm={6} xl={6} style={{ color: "#0088ff" }}><h4>ID: </h4></Col><Col sm={6} xl={6} style={{ color: "#474342" }}>{person.id}</Col>
+                                                    </Row>
                                                     <Row className="person-item__title">
                                                         <Col sm={6} xl={6} style={{ color: "#0088ff" }}><h4>Height: </h4></Col><Col sm={6} xl={6} style={{ color: "#474342" }}>{person.height}</Col>
                                                     </Row>
