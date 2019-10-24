@@ -1,0 +1,8 @@
+{
+  "short_name": "Starwars",
+  "name": "API Starwars",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
